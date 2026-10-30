@@ -1,0 +1,509 @@
+
+/* =========================================
+   GUIA DE PARTICIPAÇÃO
+   JOVENS DO AMANHÃ
+========================================= */
+
+.registration-page {
+    background: #f5f6fb;
+    color: #17233b;
+    overflow-x: clip;
+}
+
+.registration-page .container,
+.guide-container {
+    width: min(1120px, calc(100% - 48px));
+    margin-inline: auto;
+}
+
+.registration-page .site-header {
+    position: sticky;
+    top: 0;
+    z-index: 20;
+}
+
+.back-home {
+    color: #1748ff;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.guide-hero {
+    padding: 100px 0 110px;
+    background: #101b42;
+    color: #fff;
+}
+
+.guide-container {
+    position: relative;
+}
+
+.guide-kicker {
+    display: inline-block;
+    color: #1748ff;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+    line-height: 1.5;
+}
+
+.guide-hero .guide-kicker {
+    color: #c7ff55;
+}
+
+.guide-hero h1 {
+    max-width: 780px;
+    margin: 20px 0;
+    color: #fff;
+    font-family: "Manrope", sans-serif;
+    font-size: clamp(38px, 6vw, 68px);
+    font-weight: 800;
+    line-height: 1.08;
+    letter-spacing: -2px;
+    overflow-wrap: break-word;
+}
+
+.guide-hero h1 span {
+    display: block;
+    color: #c7ff55;
+}
+
+.guide-hero p {
+    max-width: 620px;
+    color: #d5deed;
+    font-size: 17px;
+    line-height: 1.8;
+}
+
+.guide-start {
+    display: inline-flex;
+    align-items: center;
+    gap: 25px;
+    margin-top: 20px;
+    padding: 15px 22px;
+    border-radius: 999px;
+    background: #ff6b35;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 800;
+    transition: .2s ease;
+}
+
+.guide-start:hover {
+    background: #e95725;
+    transform: translateY(-2px);
+}
+
+.guide-section {
+    padding: 90px 0 110px;
+}
+
+.guide-heading {
+    max-width: 650px;
+    margin-bottom: 42px;
+}
+
+.guide-heading h2 {
+    margin: 12px 0;
+    color: #17233b;
+    font-family: "Manrope", sans-serif;
+    font-size: clamp(30px, 4vw, 44px);
+    font-weight: 800;
+    line-height: 1.2;
+}
+
+.guide-heading p {
+    color: #647087;
+    font-size: 15px;
+    line-height: 1.7;
+}
+
+.guide-layout {
+    display: grid;
+    grid-template-columns: 285px minmax(0, 1fr);
+    align-items: start;
+    gap: 28px;
+}
+
+.guide-sidebar,
+.guide-content {
+    min-width: 0;
+    border: 1px solid #e2e8f2;
+    border-radius: 22px;
+    background: #fff;
+    box-shadow: 0 10px 30px rgba(24, 45, 83, .05);
+}
+
+.guide-sidebar {
+    padding: 25px 20px;
+}
+
+.sidebar-label,
+.progress-text {
+    color: #69768b;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+.progress-track {
+    height: 7px;
+    margin: 13px 0 9px;
+    border-radius: 20px;
+    background: #e9edf5;
+    overflow: hidden;
+}
+
+.progress-fill {
+    width: 20%;
+    height: 100%;
+    border-radius: inherit;
+    background: #1748ff;
+    transition: width .3s ease;
+}
+
+.step-list {
+    display: grid;
+    gap: 8px;
+    margin-top: 25px;
+}
+
+.step-item {
+    width: 100%;
+    min-width: 0;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 13px 10px;
+    border: 0;
+    border-radius: 12px;
+    background: transparent;
+    color: #566176;
+    text-align: left;
+    font: inherit;
+    font-size: 13px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: .2s ease;
+}
+
+.step-item:hover {
+    background: #f3f5fb;
+}
+
+.step-item.active {
+    background: #edf1ff;
+    color: #1748ff;
+}
+
+.step-number {
+    flex: 0 0 34px;
+    width: 34px;
+    height: 34px;
+    display: grid;
+    place-items: center;
+    border-radius: 10px;
+    background: #f0f2f7;
+    color: #6b7890;
+    font-size: 11px;
+    font-weight: 800;
+}
+
+.step-item.active .step-number {
+    background: #1748ff;
+    color: #fff;
+}
+
+.guide-content {
+    padding: clamp(24px, 4vw, 48px);
+}
+
+.guide-step {
+    display: none;
+    animation: step-appear .3s ease;
+}
+
+.guide-step.active {
+    display: block;
+}
+
+@keyframes step-appear {
+    from {
+        opacity: 0;
+        transform: translateY(8px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.step-icon {
+    width: 54px;
+    height: 54px;
+    display: grid;
+    place-items: center;
+    margin-bottom: 25px;
+    border-radius: 16px;
+    background: #edf1ff;
+    color: #1748ff;
+    font-family: "Manrope", sans-serif;
+    font-size: 19px;
+    font-weight: 800;
+}
+
+.content-label {
+    color: #1748ff;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+}
+
+.guide-step h3 {
+    margin: 12px 0 16px;
+    color: #17233b;
+    font-family: "Manrope", sans-serif;
+    font-size: clamp(25px, 3vw, 34px);
+    font-weight: 800;
+    line-height: 1.2;
+}
+
+.guide-step > p {
+    color: #59677b;
+    font-size: 15px;
+    line-height: 1.85;
+}
+
+.tip-box {
+    margin-top: 27px;
+    padding: 20px;
+    border-left: 4px solid #c7ff55;
+    border-radius: 0 12px 12px 0;
+    background: #f5f7fb;
+}
+
+.tip-box strong {
+    color: #17233b;
+    font-size: 14px;
+}
+
+.tip-box p {
+    margin: 7px 0 0;
+    color: #647087;
+    font-size: 13px;
+    line-height: 1.7;
+}
+
+.official-link {
+    display: inline-flex;
+    margin-top: 25px;
+    color: #1748ff;
+    font-size: 14px;
+    font-weight: 800;
+    text-decoration: underline;
+    text-underline-offset: 4px;
+}
+
+.guide-controls {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    margin-top: 38px;
+    padding-top: 25px;
+    border-top: 1px solid #e8edf5;
+}
+
+.guide-controls button {
+    min-height: 48px;
+    padding: 0 20px;
+    border: 1px solid #dce3ef;
+    border-radius: 999px;
+    background: #fff;
+    color: #263650;
+    font: inherit;
+    font-size: 13px;
+    font-weight: 800;
+    cursor: pointer;
+}
+
+.guide-controls .step-next {
+    border-color: #ff6b35;
+    background: #ff6b35;
+    color: #fff;
+}
+
+.guide-controls button:disabled {
+    opacity: .4;
+    cursor: not-allowed;
+}
+
+.guide-complete {
+    display: flex;
+    gap: 15px;
+    margin-top: 25px;
+    padding: 20px;
+    border-radius: 14px;
+    background: #eff8e7;
+    color: #244b2e;
+}
+
+.guide-complete[hidden] {
+    display: none;
+}
+
+.guide-complete > span {
+    color: #4c9b46;
+    font-size: 25px;
+}
+
+.guide-complete p {
+    margin: 5px 0 0;
+    color: #526d55;
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+.guide-reminder {
+    padding: 70px 0;
+    background: #101b42;
+    color: #fff;
+}
+
+.reminder-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 35px;
+}
+
+.reminder-inner > div {
+    max-width: 650px;
+}
+
+.reminder-inner h2 {
+    margin: 12px 0;
+    color: #fff;
+    font-family: "Manrope", sans-serif;
+    font-size: clamp(25px, 4vw, 38px);
+    line-height: 1.2;
+}
+
+.reminder-inner p {
+    margin: 0;
+    color: #c4cede;
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+.reminder-inner > a {
+    flex-shrink: 0;
+    padding: 15px 20px;
+    border-radius: 999px;
+    background: #c7ff55;
+    color: #101b42;
+    font-size: 13px;
+    font-weight: 800;
+}
+
+.registration-page .site-footer {
+    background: #0b1220;
+}
+
+@media (max-width: 760px) {
+    .registration-page .container,
+    .guide-container {
+        width: calc(100% - 36px);
+    }
+
+    .guide-hero {
+        padding: 70px 0 75px;
+    }
+
+    .guide-hero h1 {
+        font-size: clamp(36px, 9vw, 54px);
+        letter-spacing: -1.4px;
+    }
+
+    .guide-hero p {
+        font-size: 15px;
+    }
+
+    .guide-section {
+        padding: 65px 0 75px;
+    }
+
+    .guide-layout {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .guide-sidebar {
+        padding: 20px;
+    }
+
+    .step-list {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .step-item {
+        align-items: flex-start;
+        font-size: 12px;
+    }
+
+    .guide-content {
+        padding: 25px 22px;
+    }
+
+    .reminder-inner {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 420px) {
+    .registration-page .container,
+    .guide-container {
+        width: calc(100% - 28px);
+    }
+
+    .back-home {
+        font-size: 11px;
+    }
+
+    .guide-hero {
+        padding: 55px 0 60px;
+    }
+
+    .guide-hero h1 {
+        font-size: 36px;
+    }
+
+    .step-list {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .guide-content {
+        padding: 22px 18px;
+    }
+
+    .guide-controls button {
+        padding: 0 15px;
+        font-size: 12px;
+    }
+
+    .tip-box {
+        padding: 16px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .guide-step {
+        animation: none;
+    }
+
+    .guide-start,
+    .step-item,
+    .progress-fill {
+        transition: none;
+    }
+}
